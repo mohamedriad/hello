@@ -5,10 +5,10 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirments.txt
 test:
-	python -m pytest -vv --cov=myrepolib tests/*.py
-	python -m pytest --nbval notebook.ipnyb
+	#python -m pytest -vv --cov=myrepolib tests/*.py
+	#python -m pytest --nbval notebook.ipnyb
 	
 lint:
-	pylint --disable=R,C myrepolib cli web
+	pylint --disable=R,C hello.py
 
 all: install lint  test
